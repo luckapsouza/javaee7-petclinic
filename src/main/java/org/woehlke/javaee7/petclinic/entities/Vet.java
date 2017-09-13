@@ -47,6 +47,11 @@ public class Vet {
     @NotEmpty
     @Field(index= Index.YES, analyze= Analyze.YES, store= Store.NO)
     private String lastName;
+    
+    @Column(name = "admission_date")
+    @NotEmpty
+    @Field(index= Index.YES, analyze= Analyze.YES, store= Store.NO)
+    private String admissionDate;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "vet_specialties",
